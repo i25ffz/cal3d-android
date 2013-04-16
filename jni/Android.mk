@@ -46,12 +46,11 @@ ifeq ($(TARGET_ARCH_ABI),x86)
 LOCAL_CFLAGS += -fno-stack-protector 
 endif
 	
-LOCAL_C_INCLUDES :=	inc	\
-					inc/Base \
-					inc/GameState \
-					inc/Utils	\
-					inc/GUI	\
-					program
+LOCAL_C_INCLUDES :=  $(LOCAL_PATH)/inc/Base \
+					$(LOCAL_PATH)/inc/GameState \
+					$(LOCAL_PATH)/inc/Utils	\
+					$(LOCAL_PATH)/inc/GUI	\
+					$(LOCAL_PATH)/program
 					
 LOCAL_SRC_FILES :=  src/Base/ARGameProgram.cpp	\
 					src/Base/GameStateManager.cpp \
